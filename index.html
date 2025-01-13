@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Nikita</title>
+  <style>
+    /* General Styling */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Centered Container */
+    .container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Heading Animation */
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+      color: #ffffff;
+      text-shadow: 2px 2px 5px #ff0066;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      color: #ffffff;
+    }
+
+    /* Button Styling */
+    .love-button {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      background: #ff4d4d;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .love-button:hover {
+      background: #ff1a1a;
+      transform: scale(1.1);
+    }
+
+    /* Animated Message Box */
+    .message-box {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.9);
+      color: #ff0066;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      font-size: 1.5rem;
+      animation: slideIn 0.5s ease-in-out;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -70%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome Miss Nikita Pandey</h1>
+    <p>Yah website tumhare liye banaya gaya hai. Aur abhi ismein aur bhi sudhar karna baki hai ishi baat pr love you bol do.</p>
+    <button class="love-button" onclick="showMessage()">Love you</button>
+  </div>
+
+  <div class="message-box" id="messageBox">
+    Love you Too ❤️
+  </div>
+
+  <script>
+    // Show the message box when button is clicked
+    function showMessage() {
+      const messageBox = document.getElementById('messageBox');
+      messageBox.style.display = 'block';
+      setTimeout(() => {
+        messageBox.style.display = 'none';
+      }, 3000); // Hide after 3 seconds
+    }
+  </script>
+</body>
+</html>
